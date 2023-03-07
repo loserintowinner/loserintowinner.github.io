@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include head.html %}
+  </head>
+  <body   data-spy="scroll" data-target=".toc" data-offset="20">
+    <div class="container azul">
+      <header class="top row gutters{% if page.title == "Home" %} fadeInLeft animated{% endif %}">
+        <div class="col span_2 center">
+          <!-- TODO: add baseurl to the logo link -->
+          <a href="{{ site.url }}" id="logo" title="{{ site.title }}"
+             style="background-image: url({{site.baseurl}}/public/images/logo.jpg);"></a>
+        </div>
+        {% include navigation.html %}
+      </header>
+
+      {{ content }}
+    </div>
+
+    <!-- scripts -->
+    <script src="{{site.baseurl}}/public/js/jquery.min.js"></script>
+    <script src="{{site.baseurl}}/public/js/jquery.fitvids.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("article").fitVids();
+      });
+    </script>
+    <!-- {% include google_analytics.html %} -->
+
+    <script src="{{site.baseurl}}/public/js/scrollnav.min.umd.js"></script>
+    <script>
+        const ct = document.querySelector('body > div');  //".post-content"指向文章内容所在的div，需根据实际情况修改
+        scrollnav.init(ct, { 
+            debug: false,
+            easingStyle: 'linear',
+            //section为一级目录，subsection为二级目录
+            //以下两行意为h3为一级目录，h4为二级目录（个人只需要一级目录，所以注释了二级目录）
+            // sections: ($('body > div > h1').length>0) ? 'h2' : 'h3',
+            // subSections: ($('.post-content > h1').length>0) ? 'h3' : 'h4',
+            sections: ($('h1').length>0) ? 'h1' : 'h2',
+            subSections: ($('h1').length>0) ? 'h2' : 'h3',
+        });
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,8 @@
+- url: /
+  title: Home
+
+- url: https://github.com/loserintowinner
+  title: Github
+
+- url: /about
+  title: About
