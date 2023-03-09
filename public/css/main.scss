@@ -128,17 +128,17 @@ footer {
 
 /*----------------------------------------------------------------------------*/
 
-.highlight {
-  padding: 30px;
-  border-radius: 6px;
-  background-color: #272822;
-  color: #f8f8f2;
-  line-height: 1;
+// .highlight {
+//   padding: 1em;
+//   border-radius: 6px;
+//   background-color: #272822;
+//   color: #f8f8f2;
+//   line-height: 1;
 
-  code {
-    font-size: .7rem;
-  }
-}
+//   code {
+//     font-size: .7rem;
+//   }
+// }
 
 .container {
   max-width: 750px;
@@ -339,5 +339,25 @@ dl,
 .scroll-nav__link, .scroll-nav__sub-link {
   color: #646a73;
   text-decoration: none;
+}
+
+pre {
+  padding: 1em;
+  border-radius: 6px;
+  background-color: #272822;
+  color: #f8f8f2;
+  line-height: 1;
+
+  code {
+    font-size: .7rem;
+  }
+  overflow-x: auto;
+}
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777;
+  margin: 15px 0;
 }
 
