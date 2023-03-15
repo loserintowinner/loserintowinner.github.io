@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【Mysql】分布式锁的实现
+title: 【分布式锁】Mysql的三种实现
 ---
 
 
