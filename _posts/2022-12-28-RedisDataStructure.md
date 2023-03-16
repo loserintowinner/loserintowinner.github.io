@@ -42,7 +42,7 @@ Redis 的哈希桶是怎么保存键值对数据的呢？
 
 这里是一张 Redis 保存键值对所涉及到的数据结构。
 
-![图片](../assets/Redis.assets/640.png)
+![图片](../assets/Ml_ALS.assets/640-16785057108164.png)
 
 ### 对象结构设计
 

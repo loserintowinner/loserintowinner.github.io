@@ -16,16 +16,16 @@ layout: default
 <script src="{{site.baseurl}}/public/js/scrollnav.min.umd.js"></script>
 <script src="{{site.baseurl}}/public/js/jquery.min.js"></script>
 <script>
-  const ct = document.querySelector('body > div');  //".post-content"指向文章内容所在的div，需根据实际情况修改
-  scrollnav.init(ct, {
-    debug: false,
-    easingStyle: 'linear',
-    //section为一级目录，subsection为二级目录
-    //以下两行意为h3为一级目录，h4为二级目录（个人只需要一级目录，所以注释了二级目录）
-    // sections: ($('body > div > h1').length>0) ? 'h2' : 'h3',
-    // subSections: ($('.post-content > h1').length>0) ? 'h3' : 'h4',
-    sections: 'h2',
-    subSections: 'h3',
-  });
+    function createNav () {
+      const ct = document.querySelector('body > div');  //".post-content"指向文章内容所在的div，需根据实际情况修改
+      scrollnav.init(ct, {
+        debug: false,
+        easingStyle: 'linear',
+        //section为一级目录，subsection为二级目录
+        sections: 'h2',
+        subSections: 'h3',
+      });
+    }
+    // 页面内容过多会导致目录锚点错位，选择延迟加载
+    setTimeout(createNav, 1500);
 </script>
-
